@@ -1,4 +1,11 @@
-body{
-  margin: 0;
-  padding: 0;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------- Form Style ------------- */
+
+.inputIcon {
+    width: 16px;
+    max-height: 16px;
 }
