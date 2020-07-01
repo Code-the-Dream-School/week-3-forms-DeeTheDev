@@ -39,10 +39,10 @@
 						<form>
 							<div class="form-group row">
 								<div class="col">
-								<input type="text" class="form-control" placeholder="First name">
+								<input type="text" class="form-control" minlength="2" max-length="30" placeholder="First name" required>
 								</div>
 								<div class="col">
-								<input type="text" class="form-control" placeholder="Last name">
+								<input type="text" class="form-control" minlength="2" max-length="30" placeholder="Last name" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -58,7 +58,7 @@
 									<div class="input-group-prepend">
 										<div class="input-group-text"><img src="./icons/email.png" alt="Email Icon" class="inputIcon"></div>
 									</div>
-									<input type="text" class="form-control" id="email" placeholder="name@example.com">
+									<input type="email" class="form-control" id="email" placeholder="name@example.com" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -66,7 +66,7 @@
 									<div class="input-group-prepend">
 										<div class="input-group-text"><img src="./icons/calendar.png" alt="Calendar Icon" class="inputIcon"></div>
 									</div>
-									<input type="date" class="form-control" id="phoneNumber" name="phoneNumber" value="2020-07-01" min="2020-07-01" max="2020-12-31" placeholder="yyyy-mm-dd">
+									<input type="date" class="form-control" id="phoneNumber" name="phoneNumber" value="2020-07-01" min="2020-07-01" max="2020-12-31" placeholder="yyyy-mm-dd" required>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -75,7 +75,7 @@
 										<div class="input-group-prepend">
 											<div class="input-group-text"><img src="./icons/clock.svg" alt="Clock Icon" class="inputIcon"></div>
 										</div>
-										<input type="text"class="form-control timePicker" value="10:00AM">
+										<input type="text"class="form-control timePicker" value="10:00AM" required>
 									</div>
 								</div>
 								<div class="col">
@@ -83,7 +83,7 @@
 										<div class="input-group-prepend">
 											<div class="input-group-text"><img src="./icons/person.svg" alt="Email Icon" class="inputIcon"></div>
 										</div>
-										<select class="custom-select">
+										<select class="custom-select" required>
 											<option selected value="1">1 Person</option>
 											<option value="2">2 People</option>
 											<option value="3">3 People</option>
@@ -129,17 +129,17 @@
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="first-name">First Name</label>
-									<input type="text" id="first-name" class="form-control" required>
+									<input type="text" id="first-name" class="form-control" minlength="2" max-length="30" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="last-name">Last Name</label>
-									<input type="text" id="last-name" class="form-control" required>
+									<input type="text" id="last-name" class="form-control" minlength="2" max-length="30" required>
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-group col-md-6">
 									<label for="email-1">Email</label>
-									<input type="text" id="email-1" class="form-control" placeholder="name@example.com" required>
+									<input type="email" id="email-1" class="form-control" placeholder="name@example.com" required>
 								</div>
 								<div class="form-group col-md-6">
 									<label for="phone-1">Phone</label>
