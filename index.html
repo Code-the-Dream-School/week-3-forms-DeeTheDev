@@ -5,12 +5,198 @@
     <title>Forms</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
-    <link href= "index.css" rel="stylesheet"></link>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href= "index.css" rel="stylesheet">
+	<link href= "./dist/jquery.timepicker.css" rel="stylesheet">
   </head>
   <body>
-
-
-    <script type="text/javascript" src="weather.js"></script>
+    <div class="jumbotron jumbotron-fluid" >
+      <div class="container text-sm-center">
+        <h1 class="display-4">Form Templates</h1>
+        <hr class="my-4"/>
+		<!-- Button trigger modal -->
+		<div>
+			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#reservationModal">
+				Reservation
+			</button>
+			<button type="button" class="btn btn-info" data-toggle="modal" data-target="#applicationModal">
+				Application
+			</button>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="reservationModalLabel">Reservation</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group row">
+								<div class="col">
+								<input type="text" class="form-control" minlength="2" max-length="30" placeholder="First name" required>
+								</div>
+								<div class="col">
+								<input type="text" class="form-control" minlength="2" max-length="30" placeholder="Last name" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><img src="./icons/phone.svg" alt="Telephone Icon" class="inputIcon"></div>
+									</div>
+									<input type="tel" class="form-control" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><img src="./icons/email.png" alt="Email Icon" class="inputIcon"></div>
+									</div>
+									<input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="input-group date" data-provide="datepicker"">
+									<div class="input-group-prepend">
+										<div class="input-group-text"><img src="./icons/calendar.png" alt="Calendar Icon" class="inputIcon"></div>
+									</div>
+									<input type="date" class="form-control" id="phoneNumber" name="phoneNumber" value="2020-07-01" min="2020-07-01" max="2020-12-31" placeholder="yyyy-mm-dd" required>
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text"><img src="./icons/clock.svg" alt="Clock Icon" class="inputIcon"></div>
+										</div>
+										<input type="text"class="form-control timePicker" value="10:00AM" required>
+									</div>
+								</div>
+								<div class="col">
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text"><img src="./icons/person.svg" alt="Email Icon" class="inputIcon"></div>
+										</div>
+										<select class="custom-select" required>
+											<option selected value="1">1 Person</option>
+											<option value="2">2 People</option>
+											<option value="3">3 People</option>
+											<option value="4">4 People</option>
+											<option value="5">5 People</option>
+											<option value="6">6 People</option>
+											<option value="7">7 People</option>
+											<option value="8">8 People</option>
+											<option value="9">9 People</option>
+											<option value="10">10 People</option>
+											<option value=11">11 People</option>
+											<option value=12">12 People</option>
+											<option value=13">13 People</option>
+											<option value=14">14 People</option>
+											<option value=15">15 People</option>
+											<option value=16">16 People</option>
+											<option value=17">17 People</option>
+											<option value=18">18 People</option>
+											<option value=19">19 People</option>
+											<option value=20">20 People</option>
+										  </select>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-outline-primary mt-4 text-center">Reserve</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Application Modal -->
+		<div class="modal fade" id="applicationModal" tabindex="-1" role="dialog" aria-labelledby="applicationModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="applicationModalLabel">Application</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form class="text-left">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="first-name">First Name</label>
+									<input type="text" id="first-name" class="form-control" minlength="2" max-length="30" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="last-name">Last Name</label>
+									<input type="text" id="last-name" class="form-control" minlength="2" max-length="30" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="email-1">Email</label>
+									<input type="email" id="email-1" class="form-control" placeholder="name@example.com" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="phone-1">Phone</label>
+									<input type="text" id="phone-1" class="form-control" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="position">Position Applied</label>
+									<select name="position" id="position" class="custom-select" required>
+										<option value="">- Position -</option>
+										<option value="web-dev">Web Developer</option>
+										<option value="data-analyst">Data Analyst</option>
+										<option value="data-engineer">Data Engineer</option>
+									</select>
+								</div>
+							</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" name="schedule" class="custom-control-input" id="part-time" required>
+								<label class="custom-control-label" for="part-time">Part Time</label>
+							</div>
+							<div class="custom-control custom-radio">
+								<input type="radio" name="schedule" class="custom-control-input" id="full-time" required>
+								<label class="custom-control-label" for="full-time">Full Time</label>
+							</div>
+							<div class="form-row mt-2">
+								<div class="form-group col-md-12">
+									<label for="skills">What are your workplace skills?</label>
+									<textarea class="form-control" id="skills" rows="3" required></textarea>
+								</div>
+							</div>
+							<p>Upload your resume and list of references:</p>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="customFile" required>
+								<label class="custom-file-label" for="customFile">Choose file</label>
+							</div>
+							<button type="submit" class="btn btn-outline-primary mt-4">Send Application</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="./dist/jquery.timepicker.min.js"></script>
+	<script type="text/javascript" src="weather.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.timePicker').timepicker({
+					'listWidth': 1,
+					'orientation': 'lb',
+					'timeFormat': 'h:i A',
+					'minTime': '10:00am',
+					'maxTime': '12:00am',
+				});
+			});
+        </script>
   </body>
 </html>
